@@ -18,6 +18,12 @@
   gap: 30px;
 }
 
+.clients__item {
+   @include mobile {
+   @include calc(2);
+}
+}
+
 .clients__link {
   display: flex;
   width: 170px;
