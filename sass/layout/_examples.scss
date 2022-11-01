@@ -1,0 +1,45 @@
+.examples {
+  padding-bottom: 94px;
+}
+
+.examples__title {
+  margin-bottom: 50px;
+  font-weight: var(--main-font-weight);
+  font-size: 36px;
+  line-height: var(--main-line-height);
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.examples__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.examples__item {
+  position: relative;
+  &::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+}
+
+.examples__label {
+  position: absolute;
+  width: 100%;
+  bottom: 27px;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}

@@ -1,0 +1,32 @@
+.overlay {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.overlay__box {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(101%);
+  @include transition (transform);
+
+.portfolio__card:hover &,
+.portfolio__card:focus & {
+  transform: translateY(0);
+}
+}
+
+.overlay__text {
+  justify-content: center;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  background: rgba(33, 150, 243, 0.9);
+  overflow: auto;
+}
