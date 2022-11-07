@@ -7,7 +7,7 @@
 @mixin tablet {
     @media screen and (min-width: 768px) {
         @content;
-    }
+     }
 }
 
 @mixin desktop {
@@ -15,6 +15,13 @@
         @content;
     }
 }
+
+@mixin retina {
+ @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  @content;
+  }}
 
 @mixin media {
     @media screen and (min-width: $size) {
@@ -25,3 +32,9 @@
 @mixin calc($count) {
     width: calc((100% - 30px * ($count - 1)) / $count);
 }
+
+@mixin transition($property, $time:250ms, $type:cubic-bezier(0.4, 0, 0.2, 1)) {
+ transition: $property $time $type;
+}
+// @include transition ();
+// transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);

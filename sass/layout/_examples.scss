@@ -1,5 +1,10 @@
 .examples {
   padding-bottom: 94px;
+  display: none;
+  
+  @include desktop {
+    display: block;
+  }
 }
 
 .examples__title {

@@ -1,6 +1,9 @@
 .preference__list {
+  width: 100%;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .preference__icon-box {
@@ -14,12 +17,16 @@
   margin-bottom: 30px;
 }
 
+
+
+
 .preference__icon {
   width: 70px;
   height: 70px;
 }
 
 .preference__title {
+  text-align: center;
   margin-bottom: 10px;
   font-weight: var(--main-font-weight);
   font-size: var(--main-font-size);
@@ -30,7 +37,7 @@
 }
 
 .preference__text {
-  font-size: var(--main-font-size);
+   font-size: var(--main-font-size);
   line-height: var(--second-line-height);
   letter-spacing: 0.03em;
   color: var(--first-text-color);

@@ -9,18 +9,19 @@
   --primary-bgn-color: #ffffff;
   --secondary-bgn-color: #2f303a;
   --third-bgn-color: #f5f4fa;
+  --bg-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 
   --primary-font: 'Roboto', sans-serif;
   --logo-font-family: 'Raleway', sans-serif;
   --main-font-size: 14px;
   --second-font-size: 16px;
   --main-font-weight: 700;
-  --main-line-height: 1.14;
+  --main-line-height: 1.2;
   --second-line-height: 1.7;
   --text-line-height: 1.9;
   --title-line-height: 2;
   
-  // --container-width: 1200px;
+  --container-width: 1200px;
   --main-icon-color: #afb1b8;
   --icon-bgn-color: rgba(255, 255, 255, 0.1);   
 }
