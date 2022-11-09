@@ -1,3 +1,9 @@
+@mixin before-mob {
+    @media screen and (max-width: 479px) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media screen and (min-width: 480px) {
         @content;
@@ -22,12 +28,6 @@
   (min-resolution: 2dppx) {
   @content;
   }}
-
-@mixin media {
-    @media screen and (min-width: $size) {
-        @content;
-    }
-}
 
 @mixin calc($count) {
     width: calc((100% - 30px * ($count - 1)) / $count);

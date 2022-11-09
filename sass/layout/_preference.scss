@@ -4,21 +4,29 @@
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+
+   @include desktop {
+    flex-wrap: nowrap;
+  }
 }
+
+.preference__item {
+  @include tablet {
+    @include calc(2)
+  }
+}
+
 
 .preference__icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: var(--third-bgn-color);
   border-radius: 4px;
   margin-bottom: 30px;
 }
-
-
-
 
 .preference__icon {
   width: 70px;
@@ -34,6 +42,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color);
+
+  @media screen and (min-width: 768px) {
+     text-align: left;
+  }
 }
 
 .preference__text {

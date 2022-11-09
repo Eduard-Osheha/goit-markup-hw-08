@@ -23,7 +23,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 :root {
@@ -75,17 +74,17 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -180,7 +179,7 @@ body {
 
 .hero {
   padding: 118px 60px;
-  width: 100%;
+  max-width: 100%;
   background-image: var(--bg-gradient), url("../images/hero-mob.jpg");
   background-size: cover;
   background-position: center;
@@ -215,9 +214,23 @@ body {
   }
 }
 
+.hero__container {
+  max-width: 360px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 479px) {
+  .hero__container {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    max-width: 696px;
+  }
+}
+
 .hero__title {
   margin: 0px auto 30px auto;
-  width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.6;
@@ -225,6 +238,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+@media screen and (max-width: 479px) {
+  .hero__title {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -305,6 +323,11 @@ body {
   background: var(--button-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+@media screen and (max-width: 479px) {
+  .hero__button {
+    padding: 5px 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__button {
     padding: 10px 32px;
@@ -313,9 +336,16 @@ body {
 
 .filters {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .filters__button {
@@ -775,12 +805,23 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .preference__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .preference__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
 
 .preference__icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: var(--third-bgn-color);
   border-radius: 4px;
@@ -801,6 +842,11 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .preference__title {
+    text-align: left;
+  }
 }
 
 .preference__text {
@@ -900,7 +946,7 @@ body {
     width: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team__content-box {
     width: calc((100% - 90px) / 4);
   }
@@ -940,6 +986,11 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+@media screen and (max-width: 479px) {
+  .clients__title {
+    font-size: 30px;
+  }
+}
 
 .clients__list {
   display: flex;
@@ -947,9 +998,23 @@ body {
   gap: 30px;
 }
 
+.clients__item {
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
+}
+
 .clients__link {
   display: flex;
-  width: 170px;
+  min-width: 100%;
   height: 92px;
   border-radius: 4px;
   outline: transparent;
@@ -982,6 +1047,16 @@ body {
 .portfolio__cardfocus, .portfolio__cardhover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+@media screen and (min-width: 768px) {
+  .portfolio__card {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card {
+    width: calc((100% - 60px) / 3);
+  }
+}
 
 .portfolio__content {
   padding: 20px 24px;
@@ -1000,6 +1075,11 @@ body {
 }
 .portfolio__title:hover, .portfolio__title:focus {
   color: var(--hover-color);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__title {
+    font-size: 16px;
+  }
 }
 
 .portfolio__text {
