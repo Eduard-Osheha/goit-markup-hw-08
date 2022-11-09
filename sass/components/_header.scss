@@ -6,12 +6,17 @@
 
 .header__container {
   display: flex;
+  align-items: center;
 }
 
-.site-nav,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 .contacts,
 .site-nav__list {
-  display: flex;
+  display: none;
   align-items: center;
 }
 

@@ -1,3 +1,39 @@
+// --------MOBILE MENU BUTTON--------------
+.mob-menu__open {
+    margin-left: auto;
+    display: flex;
+    padding: 12px 8px;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.mob-menu__close {
+   display: flex;
+    padding: 11px;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+  }
+
+.mob-menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  @include transition(fill);
+
+  .mob-menu__close:hover & {
+    fill: var(--hover-color);
+  }
+}
 // -------------MODAL BUTTON-------------
 .send-btn {
   margin-top: 30px;
@@ -48,6 +84,8 @@
     fill: var(--hover-color);
   }
 }
+
+
 
 // ----------HERO BUTTON------------
 .hero__button {

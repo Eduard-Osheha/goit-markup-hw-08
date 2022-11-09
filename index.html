@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="site-nav">
           <a class="logo header__logo" href="index.html" lang="en"
@@ -56,8 +56,59 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="mob-menu__open" data-menu-open>
+          <svg class="mob-menu__icon">
+            <use href="./images/icon.svg#mob-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu__container">
+          <div class="mob-menu__top">
+            <button type="button" class="mob-menu__close" data-menu-close>
+              <svg class="mob-menu__icon">
+                <use href="./images/icon.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="index.html">Студія</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="porfolio.html">Портфоліо</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="index.html">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <ul class="mob-contacts">
+              <li class="mob-contacts__item">
+                <a class="mob-contacts__tel" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts__item">
+                <a class="mob-contacts__mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <div class="socials__wrap">
+              <ul class="mob-socials">
+                <li class="mob-socials__item">Instagram</li>
+                <li class="mob-socials__item">Twitter</li>
+                <li class="mob-socials__item">Facebook</li>
+                <li class="mob-socials__item">LinkedIn</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero container">
         <div class="hero__container">
@@ -69,7 +120,7 @@
           </div>
         </div>
       </section>
-      <section class="preference container section">
+      <!-- <section class="preference container section">
         <div class="preference__wrap">
           <h2 class="preference__title visually-hidden">Переваги компанії</h2>
           <ul class="preference__list">
@@ -122,8 +173,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="examples">
+      </section> -->
+      <!-- <section class="examples">
         <div class="examples__wrap container">
           <h2 class="examples__title">Чим ми займаємося</h2>
           <ul class="examples__list">
@@ -180,8 +231,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="team">
+      </section> -->
+      <!-- <section class="team">
         <div class="team__wrap container section">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
@@ -523,8 +574,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="clients container section">
+      </section> -->
+      <!-- <section class="clients container section">
         <div class="clients__container">
           <h2 class="clients__title">Постійні клієнти</h2>
           <div class="clients__wrap">
@@ -604,7 +655,7 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- <footer class="footer">
       <div class="container footer__container">
@@ -719,7 +770,7 @@
         </div>
       </div>
     </footer> -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="form">
         <button class="close-btn" data-modal-close>
           <svg class="close-btn__icon">
@@ -804,12 +855,11 @@
           <button type="submit" class="send-btn">Відправити</button>
         </form>
       </div>
-    </div> -->
-
-    <!-- <script src="./js/modal.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script> -->
+    </div>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script> -->
   </body>
 </html>
