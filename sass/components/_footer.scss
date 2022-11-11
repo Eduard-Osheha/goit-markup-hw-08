@@ -1,39 +1,70 @@
 .footer {
   display: flex;
-  padding: 60px 0px;
   background-color: var(--secondary-bgn-color);
 }
 
 .footer__container {
   display: flex;
+  gap: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
 }
 
-
 // ---------ADRESS-------------
+.container__adress {
+  text-align: center;
+min-width: max-content;
+  @include desktop {
+    text-align: left;
+  }
+}
+
 .adress__list {
   display: inline-flex;
   flex-direction: column;
   gap: 9px;
 }
 
+
 .adress__link {
+  display: block;
   font-style: normal;
   font-size: var(--main-font-size);
   line-height: var(--second-line-height);
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  @include transition (color);
+  @include transition(color);
 
   &:hover,
   &:focus {
     color: var(--hover-color);
   }
+
+
 }
 
 .adress__link--grey {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
-  @include transition (color);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -41,12 +72,31 @@
   }
 }
 
-
-
 // ----------------SUBSCRIBE FORM---------------------
 
 .newsletter {
-  margin-left: auto;
+  text-align: center;
+  padding: 0px 15px;
+  width: 100%;
+
+  @include desktop {
+    text-align: left;
+    padding: 0px;
+    margin-left: 93px;
+    margin-right: 0;
+
+  }
+}
+
+.newsletter__wrap {
+  @include tablet {
+    width: 450px;
+    margin: 0 auto;
+  }
+   @include desktop {
+    width: 100%;
+    margin: 0px;
+  }
 }
 
 .newsletter__title {
@@ -60,17 +110,22 @@
 }
 
 .newsletter__input {
-  min-width: 358px;
+  width: 100%;
+  margin-bottom: 20px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-right: 12px;
   background: none;
   padding: 15px;
   color: var(--secondary-text-color);
-  @include transition (border-color);
+  @include transition(border-color);
+
+  @include desktop {
+  margin-right: 12px;
+  width: 358px;
+  }
 
   &::placeholder {
     font-size: 16px;
@@ -84,4 +139,3 @@
     outline: transparent;
   }
 }
-

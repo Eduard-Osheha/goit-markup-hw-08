@@ -31,7 +31,13 @@
 
 // ---------FOOTER SOCIALS--------------
 .socials {
-  margin-left: 70px;
+  // margin-left: 70px;
+  text-align: center;
+
+  @include desktop {
+    margin-left: 70px;
+    text-align: left;
+  }
 }
 
 .socials__list {

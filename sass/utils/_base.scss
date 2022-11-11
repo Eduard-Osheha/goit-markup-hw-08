@@ -3,3 +3,7 @@ body {
   background-color: var(--primary-bgn-color);
   color: var(--primary-text-color);
 }
+
+.no-scroll {
+  overflow: hidden;
+}
