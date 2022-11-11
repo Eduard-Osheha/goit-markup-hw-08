@@ -785,7 +785,7 @@ body {
 .checkbox__invisible:checked + .checkbox__custom {
   border: transparent;
   background-color: var(--hover-color);
-  background-image: url("../../images/icon-check.svg");
+  background-image: url("../images/icon-check.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
